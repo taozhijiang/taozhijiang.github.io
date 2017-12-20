@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="DESCRIPTION" content="This is the homepage of Zhijiang Tao, juse a senior C++ programmer in P.R.C .">
-<meta name="KEYWORDS" content="Nicol,C++,programmer">
+<meta name="KEYWORDS" content="Nicol,C++,programmer,bibliography">
 
 <title>Zhijiang TAO's Homepage</title>
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="icon" href="tzj.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="tzj.ico" type="image/x-icon" />
 
@@ -15,6 +15,12 @@ html, body {
     max-width: 960px;
     margin: auto;
 }
+div {
+    margin: 10px auto;
+}
+p { 
+    margin:0 auto;
+} 
 </style>
 
 </head>
@@ -22,29 +28,66 @@ html, body {
 <body bgcolor="FFFBFB">
 	<span style="text-align:center;font-family: arial,sans-serif; color:#4d90fe;">
 	<center>
-	<h2>Welcome to Zhijiang TAO's homepage!</h2>
+	<h2>Welcome to Zhijiang TAO's Homepage!</h2>
     <img src="7c0de75f.jpg"/>
 	</center>
 	</span>
+	
+	<div>
+		<p style="color:#0479A7;font-size:20px;"><strong>Current</strong></p>
+		<p>I am an ordinary programmer with more than 4 years' working experience, and I've always been fascinated by C/C++ program language, especially under Linux environment.</p>
+		<p>I have been working as a Senior Backend Developer primaryly using C++ and <a target="_blank" href="http://www.boost.org/">Boost</a> about 2 years. The majority business of the company I am working at now is 3rd-party payment service, and I am responsible for the Cash-out System of settlement department. During my worktime, I did the refactoring task, and transformed the legacy monster to a new high-perf, reliable and maintainable system.</p>
+	</div>
+	
+	<div>
+		<p style="color:#0479A7;font-size:20px;"><strong>Skills & Interest</strong></p>
+        <li>Mainly focusing on C++ and Boost, hating and despising legacy C++98, embracing modern C++. In addition to the language, also interested in Patterns and Idioms.</li>
+        <li>Working on Backend development all the time recent years, proficient in high-perf async and event-driven model. Experienced in MQ, RPC, Cache, etc.</li>
+        <li>Debug and optimize skills are very important after function development task.</li>
+        <li>Distributed System is so amazing, voting in quantum is fair and democratic, right? I've read many Distributed System algorithm and implementation articles and papers, hope can be made the best of in the future.</li>
+	</div>
 
-    <p>I am a general programer with more than 4 years' experience, and I've always been fascinated by C/C++ language.</p>
-    <p>I have been working as a Senior Backend Developer primayly using C++ and boost library nearly about 2 years. The majority business of the company I am working at now is 3rd-party payment, and I am responsible for the pay-system of settlement department.</p>
-	<center>
-	<p>Hope you can also enjoy my other sub-websites list below:</p>
-		<a href="https://taozj.net/">Tech Blog</a> | 
-		<a href="https://x.taozj.net/">Photo Gallery</a> | 
-        <a href="project.html">Project</a>
-	</center>
-
-	<br/>
-	<br/>
-	<br/>
+	<div>
+		<p style="color:#0479A7;font-size:20px;"><strong>Project</strong></p>
+		
+		<li><a href="https://github.com/taozhijiang/tibank" target="_blank"><strong>tibank</strong></a>: general http server frame work</li>
+		<p>The project was developed for the purpose of settlement channel simulator firstly, used to satisfy the Cash-out System test requirement. As an independent and logic-complete system, it was developed based on boost.asio high-perf framework, contains good HTTP 1.0/1.1 GET/POST route, parse and handle function, along with lots of backend service developing component such connection pool, timer service, task queue, and etc.</p>
+		<p>It can be modified to fulfil your own test requirements and purpose, also is a study material for backend service development newcomer.</p>
+		<li><a href="https://github.com/taozhijiang/rabbitmq_cpp_wrapper" target="_blank"><strong>rabbitmq_cpp_wrapper</strong></a>: easy-to-use rabbitmq cpp client wrapper</li>
+		<p>RabbitMQ in C/C++ is not a easy job for lacking of official client library, and thanks for alanxz's <a href="https://github.com/alanxz/rabbitmq-c.git" target="_blank">rabbitmq-c</a>. But it still too low-level and over-detail-exposed, another work <a href="https://github.com/alanxz/SimpleAmqpClient.git" target="_blank">SimpleAmqpClient</a> depends on boost-1.47.0 preventing deployed in production environment.</p>
+		<p>I add a high-level C++ wrapper for librabbitmq, make it easy to use espicially for newer. It has been tested and deployed in our product environment for a period, and can be considered stable enough.</p>
+		<li><a href="https://github.com/taozhijiang/libto" target="_blank"><strong>libto</strong></a>: another coroutine library base on boost.context</li>
+		<p>Coroutine has been more and more popular these years, I consulted many coroutine implements and work out this library. It is of stackful type, and using boost.context for underlaying resource switching and management.</p>
+		<p>Has not been strictly tested, use at your own risk.</p>
+		<li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: rss fetcher with news recommend agent based on python </li>
+		<p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
+	</div>
+	
+	<div>
+		<p style="color:#0479A7;font-size:18px;"><strong>Education</strong></p>
+		<li><strong>Sep,2010 - Jul,2013 Sichuan University, M.Eng.</strong></li>
+			<p>Focus on the research of Image and Signal Process(<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2011&filename=XDKF201130029" target="_blank">Paper1</a>,
+			<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201208047" target="_blank">Paper2</a>,
+			<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201209049" target="_blank">Paper3</a>). In addition to these academic points,I also studied backend service and large project development related fields, and had internships in <a href="https://www.alcatel-sbell.com.cn" target="_blank"><strong>Shanghai Bell</strong></a> and <a href="https://www.redhat.com" target="_blank"><strong>Redhat</strong></a>.</p>
+		<li><strong>Sep,2006 - Jul,2010 Sichuan University, B.Eng.</strong></li>
+			<p>I undergraduate life, my interest mainly in hardware and embedded system design and implement. At a time, almost all the spare time was put on the Atmel ARM9 chip-level design and manufacture, including Linux porting and apps development. My graduate thesis was an implemention of a health monitor system based on that ARM board I've made before.</p>
+			<p>Another thing need to mention was I first heard of Linux in sophomore, and this wonderful thing always with me till now, and will in future. Thanks Linus, I really love it!</p>
+	</div>
+	
+    <br />
+    <br />
+	<div align="center">
+		<p>You may also enjoy my other sub-websites list below:</p>
+		<i class="fa fa-link"></i><a href="https://taozj.net/" target="_blank">Tech Blog</a> | 
+		<i class="fa fa-link"></i><a href="https://x.taozj.net/" target="_blank">Photo Gallery</a> 
+	</div>
+		
 	<hr>
-	<center>
-	<span>
-		<em>Copyright &copy; 2015-2017. All Rights Reserved.</p></em>
-        <em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a></em>
-	</span>
-    </center>
+	<div align="center">
+		<span>
+			<em>Copyright &copy; 2015-2017. All Rights Reserved.</p></em>
+			<em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a></em>
+		</span>
+	</div>
 </body>
 </html>
