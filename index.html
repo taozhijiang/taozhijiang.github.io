@@ -21,6 +21,23 @@ div {
 p { 
     margin:0 auto;
 } 
+
+.blink {
+	color: red;
+	font-size: 14pt;
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
 </style>
 
 </head>
@@ -61,10 +78,11 @@ p {
 		<p>Has not been strictly tested, use at your own risk.</p>
 		<li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: rss fetcher with news recommend agent based on python </li>
 		<p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
+		<p>Accutaly, I am not very good at mathematics, so I will not focus on ML or something similar, please do not bother me with this any more.</p>
 	</div>
 	
 	<div>
-		<p style="color:#0479A7;font-size:18px;"><strong>Education</strong></p>
+		<p style="color:#0479A7;font-size:20px;"><strong>Education</strong></p>
 		<li><strong>Sep, 2010 - Jul, 2013 Sichuan University, M.Eng.</strong></li>
 			<p>Focus on the research of Image and Signal Process(<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2011&filename=XDKF201130029" target="_blank">Paper1</a>,
 			<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201208047" target="_blank">Paper2</a>,
@@ -77,8 +95,9 @@ p {
     <br />
     <br />
 	<div align="center">
-		<p>You may also enjoy my other sub-websites list below:</p>
-		<i class="fa fa-link"></i><a href="https://taozj.net/" target="_blank">Tech Blog</a> ( <a href="https://cpplus.cc/" target="_blank">Oversea Mirror</a> ) | 
+		<i class="fa fa-hand-o-right">&nbsp;<em class="blink">You may also enjoy my other sub-websites list below:</em></i>
+		<br />
+		<i class="fa fa-link"></i><a href="https://taozj.net/" target="_blank">Tech Blog</a> | 
 		<i class="fa fa-link"></i><a href="https://x.taozj.net/" target="_blank">Photo Gallery</a> |
 		<i class="fa fa-link"></i><a href="readlist.html" target="_blank">Reading List</a> 
 	</div>
@@ -86,8 +105,12 @@ p {
 	<hr>
 	<div align="center">
 		<span>
-			<em>Copyright &copy; 2015-2018. All Rights Reserved.</p></em>
-			<em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a></em>
+            <em>Copyright &copy; 2015-2018. All Rights Reserved.</p></em>
+            <em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a>
+                <!-- CNZZ -->
+                <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1258402767'%3E%3C/span%3E%3Cscript src='https://s11.cnzz.com/stat.php%3Fid%3D1258402767%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
+                <!-- End CNZZ Code -->
+            </em>
 		</span>
 	</div>
 </body>
