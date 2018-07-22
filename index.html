@@ -45,14 +45,14 @@ p {
 <body bgcolor="FFFBFB">
 	<span style="text-align:center;font-family: arial,sans-serif; color:#4d90fe;">
 	<center>
-	<h2>Welcome to Zhijiang TAO's Homepage!</h2>
+	<h2>Welcome to Zhijiang TAO's homepage!</h2>
     <img src="7c0de75f.jpg"/>
 	</center>
 	</span>
 	
 	<div>
 		<p style="color:#0479A7;font-size:20px;"><strong>Current</strong></p>
-		<p>I am just an ordinary programmer with more than 4 years' software development experience, and I've always been fascinated by C/C++ program language, especially under Linux environment for large-scale backend service.</p>
+		<p>I am just an ordinary programmer with more than 5 years' software development experience, and I've always been fascinated by C/C++ program language, especially under Linux environment for large-scale backend service.</p>
 		<p>I am now working as a Senior Backend Developer primaryly using C++ and <a target="_blank" href="http://www.boost.org/">Boost</a> for about 2 years. The majority business of the company I am working at now is 3rd-party payment service, and I am responsible for the Cash-out System of Settlement Department Team. During my worktime, I did the service refactoring task, and transformed the legacy monster to a new high-perf, more-reliable and maintainable system.</p>
 	</div>
 	
@@ -66,10 +66,14 @@ p {
 
 	<div>
 		<p style="color:#0479A7;font-size:20px;"><strong>Project</strong></p>
-		
-		<li><a href="https://github.com/taozhijiang/tibank" target="_blank"><strong>tibank</strong></a>: general http server frame work</li>
-		<p>The project was developed for the purpose of settlement channel simulators firstly, used to satisfy the Cash-out System test requirements. As an independent and logic-complete system, it was developed based on boost.asio high-perf framework, contains good HTTP 1.0/1.1 GET/POST route, parse and handle function, along with lots of backend service developing component such connection pool, timer service, task queue, and etc.</p>
-		<p>It can be modified to fulfil your own test requirements and purpose, also can be treated as a good study material for backend service development newcomer.</p>
+				
+		<li><a href="https://github.com/taozhijiang/tzmonitor" target="_blank"><strong>tzmonitor</strong></a>: a retrievable service monitor system</li>
+		<p>Lots of monitor system only offer display and alert function, few of them support monitor information retrive API, which is very important in feedback-robust system. Some service can take quick measures accordingly when accident happends, if it can get information quickly.</p>
+		<p>Previously these functions were implimented by meanings of 3th-party shared storage such as Redis, but I think it is really so ugly, inefficient and not elegent, and can not fulfill all situations (though it was also developed by myself before). Suffering from pains I get the idea of desired requirements which I think should be implimented, so this is the result I come out.</p>
+		<p>I have not finished detect and alarm module, so it can not be called monitor currently. But you can use it as a light-weight information collection and storage tools. Example, it can be use to record and evalution your service call time information.</p>
+		<li><a href="https://github.com/taozhijiang/tzhttpd" target="_blank"><strong>tzhttpd</strong></a>: high-performance and easy-to-use HTTP service framework.</li>
+		<p>The project was developed for the purpose of simulators firstly to satisfy test requirements. It was developed based on boost.asio, which means high-concurrency with high-performance. It supports HTTP 1.0/1.1 GET/POST handler regex routing, and some what can be configured dynamicly without restart system. It is tiny, simple but I think is very useful, it can be easily integrated into your project. It can be used in many situations such as: HTTP application gateway, HTTP protocal adapter, web manage interface, etc.</p>
+		<p>Later on, I also add VHost, Cache Control features, and can be built to a simple webserver. This site you are visiting, and <a href="http://taozj.net/" target="_blank">my blog</a> are hosted by this library.</p>
 		<li><a href="https://github.com/taozhijiang/rabbitmq_cpp_wrapper" target="_blank"><strong>rabbitmq_cpp_wrapper</strong></a>: easy-to-use rabbitmq cpp client wrapper</li>
 		<p>RabbitMQ in C/C++ is not a easy job for lacking of official client library, and thanks for alanxz's <a href="https://github.com/alanxz/rabbitmq-c.git" target="_blank">rabbitmq-c</a>. But it still too low-level and over-detail-exposed, another work <a href="https://github.com/alanxz/SimpleAmqpClient.git" target="_blank">SimpleAmqpClient</a> depends on boost-1.47.0 preventing deployed in production environment.</p>
 		<p>I add a high-level C++ wrapper for librabbitmq, make it easy to use espicially for newer. It has been tested and deployed in our product environment for a period, and can be considered stable enough.</p>
@@ -78,7 +82,7 @@ p {
 		<p>Has not been strictly tested, use at your own risk.</p>
 		<li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: rss fetcher with news recommend agent based on python </li>
 		<p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
-		<p>Accutaly, I am not very good at mathematics, so I will not focus on ML or something similar, please do not bother me with this any more.</p>
+		<p>And acctualy, I am not very good at mathematics, so I will not focus on ML or something related, please do not contact me about these any more.</p>
 	</div>
 	
 	<div>
@@ -95,11 +99,11 @@ p {
     <br />
     <br />
 	<div align="center">
-		<i class="fa fa-hand-o-right">&nbsp;<em class="blink">You may also enjoy my other sub-websites list below:</em></i>
+		<i class="fa fa-hand-o-right"></i>&nbsp;<em class="blink">You may also enjoy my other sub-websites list below:</em>
 		<br />
-		<i class="fa fa-link"></i><a href="https://taozj.net/" target="_blank">Tech Blog</a> | 
-		<i class="fa fa-link"></i><a href="https://x.taozj.net/" target="_blank">Photo Gallery</a> |
-		<i class="fa fa-link"></i><a href="readlist.html" target="_blank">Reading List</a> 
+		<i class="fa fa-link"></i><a href="http://taozj.net/" target="_blank">Tech Blog</a> { Overseas <a href="http://cpplus.cc/" target="_blank">Mirror1</a>, <a href="https://taozhijiang.github.io/" target="_blank">Mirror2</a> } | 
+		<i class="fa fa-link"></i><a href="http://x.taozj.net/" target="_blank">Photo Gallery</a> |
+		<i class="fa fa-link"></i><a href="reading.html" target="_blank">Reading List</a> 
 	</div>
 		
 	<hr>
