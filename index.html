@@ -23,95 +23,135 @@ p {
 } 
 
 .blink {
-	color: red;
-	font-size: 14pt;
-	animation: blink-animation 1s steps(5, start) infinite;
-	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+    color: red;
+    font-size: 14pt;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 @keyframes blink-animation {
-	to {
-		visibility: hidden;
-	}
+    to {
+        visibility: hidden;
+    }
 }
 @-webkit-keyframes blink-animation {
-	to {
-		visibility: hidden;
-	}
+    to {
+        visibility: hidden;
+    }
 }
 </style>
 
 </head>
 
 <body bgcolor="FFFBFB">
-	<span style="text-align:center;font-family: arial,sans-serif; color:#4d90fe;">
-	<center>
-	<h2>Welcome to Zhijiang TAO's homepage!</h2>
+    <span style="text-align:center;font-family: arial,sans-serif; color:#4d90fe;">
+    <center>
+    <h2>Welcome to Zhijiang TAO's homepage!</h2>
     <img src="7c0de75f.jpg"/>
-	</center>
-	</span>
-	
-	<div>
-		<p style="color:#0479A7;font-size:20px;"><strong>Current</strong></p>
-		<p>I am just an ordinary programmer with more than 5 years' software development experience, and I've always been fascinated by C/C++ program language, especially under Linux environment for large-scale backend service.</p>
-		<p>I am now working as a Senior Backend Developer primaryly using C++ and <a target="_blank" href="http://www.boost.org/">Boost</a> for about 2 years. The majority business of the company I am working at now is 3rd-party payment service, and I am responsible for the Cash-out System of Settlement Department Team. During my worktime, I did the service refactoring task, and transformed the legacy monster to a new high-perf, more-reliable and maintainable system.</p>
-	</div>
-	
-	<div>
-		<p style="color:#0479A7;font-size:20px;"><strong>Skills & Interest</strong></p>
-        <li>Mainly focusing on C++ and Boost, hating and despising legacy C++98, and embracing modern C++. In addition to the language rules and characteristics, I am also interested in Patterns and Idioms.</li>
-        <li>Working on Backend development all the time recent years, proficient in high-perf async and event-driven model. Experienced in MQ, RPC, Cache, etc.</li>
-        <li>Debug and optimize skills are very important after function development task, but make full use of it is really challenging.</li>
-        <li>Distributed System is so amazing, voting in quantum is fair and democratic, right? I've read many Distributed System related algorithm and implementation articles and papers, hope can be made the best of in the future.</li>
-	</div>
+    </center>
+    </span>
+    
+    <div>
+        <p style="color:#0479A7;font-size:20px;"><strong>Current</strong></p>
 
-	<div>
-		<p style="color:#0479A7;font-size:20px;"><strong>Project</strong></p>
-				
-		<li><a href="https://github.com/taozhijiang/tzmonitor" target="_blank"><strong>tzmonitor</strong></a>: a retrievable service monitor system</li>
-		<p>Lots of monitor system only offer display and alert function, few of them support monitor information retrive API, which is very important in feedback-robust system. Some service can take quick measures accordingly when accident happends, if it can get information quickly.</p>
-		<p>Previously these functions were implimented by meanings of 3th-party shared storage such as Redis, but I think it is really so ugly, inefficient and not elegent, and can not fulfill all situations (though it was also developed by myself before). Suffering from pains I get the idea of desired requirements which I think should be implimented, so this is the result I come out.</p>
-		<p>I have not finished detect and alarm module, so it can not be called monitor currently. But you can use it as a light-weight information collection and storage tools. Example, it can be use to record and evalution your service call time information.</p>
-		<li><a href="https://github.com/taozhijiang/tzhttpd" target="_blank"><strong>tzhttpd</strong></a>: high-performance and easy-to-use HTTP service framework.</li>
-		<p>The project was developed for the purpose of simulators firstly to satisfy test requirements. It was developed based on boost.asio, which means high-concurrency with high-performance. It supports HTTP 1.0/1.1 GET/POST handler regex routing, and some what can be configured dynamicly without restart system. It is tiny, simple but I think is very useful, it can be easily integrated into your project. It can be used in many situations such as: HTTP application gateway, HTTP protocal adapter, web manage interface, etc.</p>
-		<p>Later on, I also add VHost, Cache Control features, and can be built to a simple webserver. This site you are visiting, and <a href="http://taozj.net/" target="_blank">my blog</a> are hosted by this library.</p>
-		<li><a href="https://github.com/taozhijiang/rabbitmq_cpp_wrapper" target="_blank"><strong>rabbitmq_cpp_wrapper</strong></a>: easy-to-use rabbitmq cpp client wrapper</li>
-		<p>RabbitMQ in C/C++ is not a easy job for lacking of official client library, and thanks for alanxz's <a href="https://github.com/alanxz/rabbitmq-c.git" target="_blank">rabbitmq-c</a>. But it still too low-level and over-detail-exposed, another work <a href="https://github.com/alanxz/SimpleAmqpClient.git" target="_blank">SimpleAmqpClient</a> depends on boost-1.47.0 preventing deployed in production environment.</p>
-		<p>I add a high-level C++ wrapper for librabbitmq, make it easy to use espicially for newer. It has been tested and deployed in our product environment for a period, and can be considered stable enough.</p>
-		<li><a href="https://github.com/taozhijiang/libto" target="_blank"><strong>libto</strong></a>: another coroutine library base on boost.context</li>
-		<p>Coroutine has been more and more popular these years, I consulted many coroutine implements and work out this library. It is of stackful type, and using boost.context for underlaying resource switching and management.</p>
-		<p>Has not been strictly tested, use at your own risk.</p>
-		<li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: rss fetcher with news recommend agent based on python </li>
-		<p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
-		<p>And acctualy, I am not very good at mathematics, so I will not focus on ML or something related, please do not contact me about these any more.</p>
-	</div>
-	
-	<div>
-		<p style="color:#0479A7;font-size:20px;"><strong>Education</strong></p>
-		<li><strong>Sep, 2010 - Jul, 2013 Sichuan University, M.Eng.</strong></li>
-			<p>Focus on the research of Image and Signal Process(<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2011&filename=XDKF201130029" target="_blank">Paper1</a>,
-			<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201208047" target="_blank">Paper2</a>,
-			<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201209049" target="_blank">Paper3</a>). In addition to these academic points,I also studied backend service and large project development related fields, and had internships in <a href="https://www.alcatel-sbell.com.cn" target="_blank"><strong>Shanghai Bell</strong></a> and <a href="https://www.redhat.com" target="_blank"><strong>Redhat</strong></a>.</p>
-		<li><strong>Sep, 2006 - Jul, 2010 Sichuan University, B.Eng.</strong></li>
-			<p>I undergraduate life, my interest mainly in hardware and embedded system design and implement. At a time, almost all the spare time was put on the Atmel ARM9 chip-level design and manufacture, including Linux porting and apps development. My graduate thesis was an implemention of a health monitor system based on that ARM board I've made before.</p>
-			<p>Another thing need to mention was I first heard of Linux in sophomore, and this wonderful thing always with me till now, and will in future. Thanks Linus, I really love it!</p>
-	</div>
-	
+        <p>I'm just a programmer with more than 6 years' software design and development experience, and I've always been fascinated by C/C++ program language, especially in Linux environment for stable and scalable backend services.</p>
+        <p>I'm working as a Senior Backend Developer primaryly using C++ and <a target="_blank" href="http://www.boost.org/">Boost</a> library. The majority business of the company I am working at is 3rd-party payment service, and I am responsible for the Payout System of Settlement Department. In my worktime I have finished the whole system refactoring task successfully, transformed the legacy monster to a new high-performance, more-reliable and maintainable system.</p>
+        <p>Currently I'm focused on the legacy system analyse and optimization, and new system design and architure tasks.</p>
+        <br/>
+    </div>
+    
+    <div>
+        <p style="color:#0479A7;font-size:20px;"><strong>Skills & Interest</strong></p>
+
+        <li>Mainly focused on C++ and Boost, hating and despising legacy C++98 while embracing modern C++. In addition to the language rules and characteristics, I am also interested in the related Patterns and Idioms.</li>
+        <li>Working on Backend development all these years, proficient in high-performance async and event-driven model. Experienced in MQ, RPC, Cache, Distributed System, etc.</li>
+        <li>Debug and optimize skills are very important after function development task, but make full use of them is really challenging.</li>
+        <li>Distributed System is so amazing, voting in quantum is fair and democratic, right? I've read many Distributed System related algorithm articles and papers, and implementation source code, hope can be made the best of in the future.</li>
+        <br/>
+    </div>
+
+    <div>
+        <p style="color:#0479A7;font-size:20px;"><strong>Open Source</strong></p>
+
+        <li><a href="https://github.com/taozhijiang/heracles" target="_blank"><strong>heracles</strong></a>: <i>A retrievable service monitor system</i></li>
+        <p>Lots of already monitor systems only offer display and alert function, few of them support information retrive API, which I think is very important in feedback-robust system. Some services can take quick measures and actions accordingly when accident happends, if it can get information quickly enough.</p>
+        <p>Previously these functions were implimented by meanings of 3th-party shared storage such as Redis, but I think it is really so ugly, inefficient and not elegent, and can not fulfill requirements in all situations (though it was also developed by my hand before). Suffering from pains I get the idea of desired requirements which I think should be implimented, so this project is the result I come out.</p>
+        <p>It can be used as light-weight information collection and storage tools. Example, it can be use to record and evalution your service call time information. Perhaps you may use heracles with <a href="https://github.com/taozhijiang/argus" target="_blank"><strong>argus</strong></a>, which is designed for periodic tasks schedule purpose.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/tzhttpd" target="_blank"><strong>tzhttpd</strong></a>: <i>High-performance and easy-to-use HTTP service framework</i></li>
+        <p>The project was developed for the purpose of simulators firstly to satisfy our test requirements. It was developed based on boost.asio, which means high-concurrency and high-performance capacity. It supports HTTP 1.0/1.1 of GET/POST methods handler by regex routing, and can be configured dynamicly without restart the service. It is tiny, simple but I think is very useful, it can be easily integrated into your project. It can be used in many situations such as: HTTP application gateway, HTTP protocal adapter, web manage interface, etc. This framework serves several millions of HTTP request everyday in our production environment.</p>
+        <p>Later on, I also add VHost, Cache Control, Compression features, and can be built to run as a simple static webserver.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/tzrpc" target="_blank"><strong>tzrpc</strong></a>: <i>Fast C++ RPC framework based on protobuf and boost::asio</i></li>
+        <p>This framework is designed and developed for better supporting network client and service development, and is highly used in many other projects, so believe the stability. In fact, Apache Thrift is a nice RPC framework, but building our own RPC framework we are free to do many controls and modifications by ourselves.</p>
+        <p>Our tzrpc supports both synchronized and asynchronized client, asynchronized client can increase the throughout intensively. Another advantage need to point out is that asynchronized client makes the design and implementation of distribute-system message exchange simple and intuitive.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/clotho" target="_blank"><strong>clotho</strong></a>: <i>ZooKeeper official C client Wrapper for C++</i></li>
+        <p>Clotho is a C++ wrapper for official ZooKeeper C-style API client library, which can help you better using ZooKeeper-based distribution functions simply and conveniently. It is inspired by our internal editio firstly, but has been fully re-designed and extended again.</p>
+        <p>With clotho, we can enjoy service publish and discovery, business configuration updating callback, distributed lock, etc.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/argus" target="_blank"><strong>argus</strong></a>: <i>A simple job(task) schedule system</i></li>
+        <p>Argus is a crontab-like task schedule system, it is created for the purpose of cooperating with heracles, executing tasks repeatedly and periodically for monitor. Argus's cycle setting syntax is similar to crontab, but overcomes may shortages of crontab: task frequency can be one-short-per-second, not per-minute; the task can be executed in threadpool or additional independent threads, low resource compared with crontab by process; it gets rid of hard-to-debug problems such passwd expire, enviroment invalid which stops the execution of crontab tasks silently.</p>
+        <p>Also, tasks can be added, removed, or updated dynamicly through dynamic library.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/kan" target="_blank"><strong>kan</strong></a>: <i>A Raft implementation based on tzrpc</i></li>
+        <p>Kan is a Raft consensus algorithm implementation and used for stable KV store situation. The message exchange between nodes is based on tzrpc, and levelDB is used for log, meta data, state machine persistence. The Raft consensus algorithm implementation is almost the same as its author’s original implementation, so we can assume our implementation is right arbitrarily. </p>
+        <p>It works fine, and the project page contains the performance statistics. But it doesnot support membership change, and short of multi-Raft which commonly used to increase the performance by means of sharding.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/rong" target="_blank"><strong>rong</strong></a>: <i>A Paxos based consistent KV store</i></li>
+        <p>Rong is another distributed KV store service, and it's based on Paxos consensus algorithm.</p>
+        <p>This project is inspired by <a href="https://github.com/scalien/keyspace" target="_blank"><strong>keyspace</strong></a>, but has not been finished yet. CUrrently it can only serve by Basic-Paxos without Multi-Paxos optimization, the performance is poor, and the implementation is perhaps buggy!</p>
+        <p>It is still in development, stay away from it before it is mature enough.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/rabbitmq_cpp_wrapper" target="_blank"><strong>rabbitmq_cpp_wrapper</strong></a>: <i>easy-to-use rabbitmq C++ client wrapper</i></li>
+        <p>RabbitMQ in C++ is not easy for lacking of official client library, but thanks for alanxz's <a href="https://github.com/alanxz/rabbitmq-c.git" target="_blank">rabbitmq-c</a>. But rabbitmq-c is too low-level and over-detail-exposed, another work <a href="https://github.com/alanxz/SimpleAmqpClient.git" target="_blank">SimpleAmqpClient</a> depends on boost-1.47.0, preventing to be deployed in production environment.</p>
+        <p>I add a relatively high-level C++ wrapper for rabbitmq-c, makes it easy and safe to use espicially for newer. It has been tested and deployed in our product environment for a period, it works fine and can be considered stable enough.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/libto" target="_blank"><strong>libto</strong></a>: <i>another coroutine library base on boost.context</i></li>
+        <p>Coroutine has become more and more popular these years, I consulted many coroutine implements before and work out this library. It is of stackful type, and using boost.context for underlaying resource switching and management.</p>
+        <p>Has not been strictly tested, use at your own risk. One more thing, we have been using <a href="https://github.com/Tencent/libco" target="_blank"><strong>libco</strong></a> internally, and it is greate.</p>
+        <br/>
+
+        <li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: <i>Rss fetcher with news recommend engine</i></li>
+        <p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
+        <p>And acctualy, I am not very good at mathematics, so I will not focus on ML or something related, please do not contact me about these any more.</p>
+        <br/>
+    </div>
+    
+    <div>
+        <p style="color:#0479A7;font-size:20px;"><strong>Education</strong></p>
+        <li><strong>Sep, 2010 - Jul, 2013 Sichuan University, M.Eng.</strong></li>
+            <p>Focus on the research of Image and Signal Process(<a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2011&filename=XDKF201130029" target="_blank">Paper1</a>,
+            <a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201208047" target="_blank">Paper2</a>,
+            <a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFD2012&filename=SJSJ201209049" target="_blank">Paper3</a>). In addition to these academic points,I also studied backend service and large project development related fields, and had internships in <a href="https://www.alcatel-sbell.com.cn" target="_blank"><strong>Shanghai Bell</strong></a> and <a href="https://www.redhat.com" target="_blank"><strong>Redhat</strong></a>.</p>
+        <li><strong>Sep, 2006 - Jul, 2010 Sichuan University, B.Eng.</strong></li>
+            <p>I undergraduate life, my interest mainly in hardware and embedded system design and implement. At a time, almost all the spare time was put on the Atmel ARM9 chip-level design and manufacture, including Linux porting and apps development. My graduate thesis was an implemention of a health monitor system based on that ARM board I've made before.</p>
+            <p>Another thing need to mention was I first heard of Linux in sophomore, and this wonderful thing always with me till now, and will in future. Thanks Linus, I really love it!</p>
+    </div>
+    
     <br />
     <br />
-	<div align="center">
-		<i class="fa fa-hand-o-right"></i>&nbsp;<em class="blink">You may also enjoy my other sub-websites list below:</em>
-		<br />
-		<i class="fa fa-link"></i><a href="http://blog.taozj.org" target="_blank">Tech Blog</a> | 
-		<i class="fa fa-link"></i><a href="reading.html" target="_blank">Reading List</a> 
-	</div>
-		
-	<hr>
-	<div align="center">
-		<span>
+    <div align="center">
+        <i class="fa fa-hand-o-right"></i>&nbsp;<em class="blink">You may also enjoy my other sub-websites list below:</em>
+        <br />
+        <i class="fa fa-link"></i><a href="http://blog.taozj.org" target="_blank">Tech Blog</a> | 
+        <i class="fa fa-link"></i><a href="reading.html" target="_blank">Reading List</a> 
+    </div>
+        
+    <hr>
+    <div align="center">
+        <span>
             <em>Copyright &copy; 2015-2019. All Rights Reserved.</p></em>
             <em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a>
             </em>
-		</span>
-	</div>
+        </span>
+    </div>
 </body>
 </html>
