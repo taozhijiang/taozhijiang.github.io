@@ -93,11 +93,6 @@ p {
         <p>With clotho, we can enjoy service publish and discovery, business configuration updating callback, distributed lock, etc.</p>
         <br/>
 
-        <li><a href="https://github.com/taozhijiang/argus" target="_blank"><strong>argus</strong></a>: <i>A simple job(task) schedule system</i></li>
-        <p>Argus is a crontab-like task schedule system, it is created for the purpose of cooperating with heracles, executing tasks repeatedly and periodically for monitor. Argus's cycle setting syntax is similar to crontab, but overcomes may shortages of crontab: task frequency can be one-short-per-second, not per-minute; the task can be executed in threadpool or additional independent threads, low resource compared with crontab by process; it gets rid of hard-to-debug problems such passwd expire, enviroment invalid which stops the execution of crontab tasks silently.</p>
-        <p>Also, tasks can be added, removed, or updated dynamicly through dynamic library.</p>
-        <br/>
-
         <li><a href="https://github.com/taozhijiang/kan" target="_blank"><strong>kan</strong></a>: <i>A Raft implementation based on tzrpc</i></li>
         <p>Kan is a Raft consensus algorithm implementation and used for stable KV store situation. The message exchange between nodes is based on tzrpc, and levelDB is used for log, meta data, state machine persistence. The Raft consensus algorithm implementation is almost the same as its author’s original implementation, so we can assume our implementation is right arbitrarily. </p>
         <p>It works fine, and the project page contains the performance statistics. But it doesnot support membership change, and short of multi-Raft which commonly used to increase the performance by means of sharding.</p>
@@ -114,15 +109,6 @@ p {
         <p>I add a relatively high-level C++ wrapper for rabbitmq-c, makes it easy and safe to use espicially for newer. It has been tested and deployed in our product environment for a period, it works fine and can be considered stable enough.</p>
         <br/>
 
-        <li><a href="https://github.com/taozhijiang/libto" target="_blank"><strong>libto</strong></a>: <i>another coroutine library base on boost.context</i></li>
-        <p>Coroutine has become more and more popular these years, I consulted many coroutine implements before and work out this library. It is of stackful type, and using boost.context for underlaying resource switching and management.</p>
-        <p>Has not been strictly tested, use at your own risk. One more thing, we have been using <a href="https://github.com/Tencent/libco" target="_blank"><strong>libco</strong></a> internally, and it is greate.</p>
-        <br/>
-
-        <li><a href="https://github.com/taozhijiang/readmeinfo" target="_blank"><strong>readmeinfo</strong></a>: <i>Rss fetcher with news recommend engine</i></li>
-        <p>Once upon a time I was interested in Recommend System and Machine Learning, so I created this tool. It was built by python with simple tornado web interface, fetching supplied rss feeds, and recommend through SVD、MaxEnt methods. This project was discontinued, and won't update any more!</p>
-        <p>And acctualy, I am not very good at mathematics, so I will not focus on ML or something related, please do not contact me about these any more.</p>
-        <br/>
     </div>
     
     <div>
@@ -150,6 +136,15 @@ p {
         <span>
             <em>Copyright &copy; 2015-2019. All Rights Reserved.</p></em>
             <em><img src="./icp_min.png" alt="粤ICP备17002382号" height="16" /><a href="http://www.miibeian.gov.cn/">粤ICP备17002382号</a>
+            </em>
+            <em>
+                <p id='self_visit_counter'></p>
+                <script type="text/javascript" src="https://sz.taozj.org/counter.js"></script>
+                <script type="text/javascript">
+                    var url = 'https://sz.taozj.org/counter';
+                    var page_counter = document.getElementById('self_visit_counter');
+                    counter_report(url, 10086, page_counter);
+                </script>
             </em>
         </span>
     </div>
